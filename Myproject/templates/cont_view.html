@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Contact Us - View Messages</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <style>
+        .contact-list-container {
+            max-height: 500px; /* Adjust the height as needed */
+        
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better card distinction */
+        }
+        .contact-card h5 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .contact-card p {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+    </style>
+    
+</head>
+<body class="sub_page">
+    <div class="hero_area">
+        <!-- header section starts -->
+        {% include "nav.html" %}
+        <!-- end header section -->
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Contact Messages</h2>
+        {% if contacts %}
+        <div class="contact-list-container">
+            <div class="contact-list">
+                {% for contact in contacts %}
+                <div class="contact-card">
+                    <h5>{{ contact.full_name }}</h5>
+                    <p><strong>Phone:</strong> {{ contact.phone_number }}</p>
+                    <p><strong>Email:</strong> {{ contact.email }}</p>
+                    <p><strong>Message:</strong> {{ contact.message }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <p class="text-center">No contacts available.</p>
+        {% endif %}
+    </div>
+
+    <!-- footer section -->
+  <section class="container-fluid footer_section" style="padding-top: 50px;">
+    <p>
+      &copy; 2025 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </section>
+  <!-- footer section -->
+</body>
+</html>

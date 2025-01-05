@@ -1,0 +1,507 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>CodeX Devs</title>
+
+ <!-- External CSS -->
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+
+ 
+  <!-- Local CSS (using Django's static files) -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+  <style>input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical; /* Allows vertical resizing */
+    height: 100px; /* Adjust height for better alignment with input fields */
+  }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    {% include "nav.html" %}
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col">
+                  <div class="detail-box">
+                    <div>
+                      <h2>
+                        welcome to
+
+                      </h2>
+                      <h1>
+                        CodeX Developers
+                      </h1>
+                      <p>
+                        A Web Development Agency With Lot Of Services To Offer
+                      </p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- do section -->
+
+ 
+
+<section class="do_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                What we do
+            </h2>
+            <p>Here are Our Main Services</p>
+        </div>
+        <div class="do_container">
+            <div class="box arrow-start arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-1.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>
+                        Development
+                    </h6>
+                </div>
+            </div>
+            <div class="box arrow-middle arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-2.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>
+                        Testing
+                    </h6>
+                </div>
+            </div>
+            <div class="box arrow-middle arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-3.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>
+                        Deployment
+                    </h6>
+                </div>
+            </div>
+            <div class="box arrow-end arrow_bg">
+                <div class="img-box">
+                    <img src="{% static 'images/d-4.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>
+                        PHP
+                    </h6>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-box">
+                    <img src="{% static 'images/d-5.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h6>
+                        Django
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- end do section -->
+
+  <!-- who section -->
+ 
+  <!-- Who Section -->
+  <section class="who_section">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-5">
+                  <div class="img-box">
+                      <img src="{% static 'images/who-img.jpg' %}" alt="">
+                  </div>
+              </div>
+              <div class="col-md-7">
+                  <div class="detail-box">
+                      <div class="heading_container">
+                          <h2>WHO WE ARE?</h2>
+                      </div>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                      </p>
+                      <div>
+                          <a href="#">Read More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <!-- Work Section -->
+  <section class="work_section layout_padding">
+      <div class="container">
+          <div class="heading_container">
+              <h2>CREATIVE WORKS</h2>
+              <p>
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation
+              </p>
+          </div>
+          <div class="work_container layout_padding2">
+              <div class="box b-1">
+                  <img src="{% static 'images/w-1.png' %}" alt="">
+              </div>
+              <div class="box b-2">
+                  <img src="{% static 'images/w-2.png' %}" alt="">
+              </div>
+              <div class="box b-3">
+                  <img src="{% static 'images/w-3.png' %}" alt="">
+              </div>
+              <div class="box b-4">
+                  <img src="{% static 'images/w-4.png' %}" alt="">
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <!-- Client Section -->
+  <section class="client_section">
+    <div class="container">
+        <div class="heading_container">
+            <h2>WHAT CUSTOMERS SAY</h2>
+        </div>
+        <div class="carousel-wrap">
+            <div class="owl-carousel">
+                {% for feedback in feedback_list %}
+                <div class="item">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="{{ feedback.image.url }}" alt="{{ feedback.name }}">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                {{ feedback.name }}<br>
+                                <span>{{ feedback.designation }}</span>
+                            </h5>
+                            <img src="{% static 'images/quote.png' %}" alt="quote">
+                            <p>{{ feedback.quote }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+  <!-- end client section -->
+
+  <!-- target section -->
+  <section class="target_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              1000+
+            </h2>
+            <h5>
+              Years of Business
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              20000+
+            </h2>
+            <h5>
+              Projects Delivered
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              10000+
+            </h2>
+            <h5>
+              Satisfied Customers
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="detail-box">
+            <h2>
+              1500+
+            </h2>
+            <h5>
+              Cups of Coffee
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end target section -->
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+
+      <div class="heading_container">
+        <h2>
+          Request A Call Back
+        </h2>
+      </div>
+      <div class="">
+        <div class="">
+          <div class="row">
+            <div class="col-md-9 mx-auto">
+              <div class="contact-form">
+                <form method="post" action="{% url 'contact' %}">
+                  {% csrf_token %}
+                  <div>
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                  </div>
+                  <div>
+                    <input type="text" name="phone_number" placeholder="Phone Number" required>
+                  </div>
+                  <div>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                  </div>
+                  <div>
+                    <textarea name="message" placeholder="Message" class="input_message" required></textarea>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn_on-hover">
+                      Send
+                    </button>
+                  </div>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map_img-box">
+        <img src="{% static 'images/map-img.png' %}" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info_contact">
+                    <h5>
+                        About Shop
+                    </h5>
+                    <div>
+                        <div class="img-box">
+                            <img src="{% static 'images/location-white.png' %}" width="18px" alt="">
+                        </div>
+                        <p>
+                            Address
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="{% static 'images/telephone-white.png' %}" width="12px" alt="">
+                        </div>
+                        <p>
+                            +01 1234567890
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="{% static 'images/envelope-white.png' %}" width="18px" alt="">
+                        </div>
+                        <p>
+                            demo@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="info_info">
+                    <h5>
+                        Informations
+                    </h5>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="info_insta">
+                    <h5>
+                        Instagram
+                    </h5>
+                    <div class="insta_container">
+                        <div>
+                            <a href="#">
+                                <div class="insta-box b-1">
+                                    <img src="{% static 'images/insta.png' %}" alt="">
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="insta-box b-2">
+                                    <img src="{% static 'images/insta.png' %}" alt="">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="#">
+                                <div class="insta-box b-3">
+                                    <img src="{% static 'images/insta.png' %}" alt="">
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="insta-box b-4">
+                                    <img src="{% static 'images/insta.png' %}" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <div class="insta-box b-3">
+                                    <img src="{% static 'images/insta.png' %}" alt="">
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="insta-box b-4">
+                                    <img src="{% static 'images/insta.png' %}" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="info_form ">
+                    <h5>
+                        Newsletter
+                    </h5>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            Subscribe
+                        </button>
+                    </form>
+                    <div class="social_box">
+                        <a href="#">
+                            <img src="{% static 'images/fb.png' %}" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{% static 'images/twitter.png' %}" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{% static 'images/linkedin.png' %}" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="{% static 'images/youtube.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; Project Made By CodeOra
+      <a href="https://html.design/">zafran Haider </a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+  <!-- External JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+
+  
+
+</body>
+
+</html>

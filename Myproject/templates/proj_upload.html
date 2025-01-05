@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Portfolio Upload</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+</head>
+<body class="sub_page">
+    <div class="hero_area">
+      <!-- header section strats -->
+      {% include "nav.html" %}
+      <!-- end header section -->
+    </div>
+    <div class="container mt-5">
+        <h2>Portfolio Upload</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" class="form-control" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" name="image" id="image" class="form-control-file" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Upload</button>
+        </form>
+    </div>
+    <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2025 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </section>
+  <!-- footer section -->
+</body>
+</html>

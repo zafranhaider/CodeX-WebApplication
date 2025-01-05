@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+ 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+</head>
+<body class="sub_page">
+    <div class="hero_area">
+      <!-- header section strats -->
+      {% include "nav.html" %}
+      <!-- end header section -->
+
+ 
+      
+  <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card shadow" style="width: 100%; max-width: 400px;">
+      <div class="card-body">
+        <h3 class="text-center mb-4">Admin Login</h3>
+        <form method="POST" >
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        
+     
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

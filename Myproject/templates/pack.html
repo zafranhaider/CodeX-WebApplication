@@ -1,0 +1,266 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        .header_section {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #343a40;
+        }
+        .navbar-brand span {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107 !important;
+        }
+        .user_option img {
+            height: 25px;
+        }
+        .package-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .package-header {
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .package-price {
+            color: #28a745;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .package-btn {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .package-btn .btn {
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .package-btn .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+ {% include "nav.html" %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1>Our Software Packages</h1>
+        <p>Choose a package that best suits your needs</p>
+    </div>
+    <div class="row">
+      <!-- Package 1 -->
+      <div class="col-md-4">
+          <div class="package-card p-4">
+              <div class="package-header">Website in Django</div>
+              <div class="package-price">$49.99</div>
+              <ul class="package-features">
+                  <li>User Authentication</li>
+                  <li>Admin Panel</li>
+                  <li>Blog Section</li>
+                  <li>Contact Form</li>
+              </ul>
+             
+          </div>
+      </div>
+  
+      <!-- Package 2 -->
+      <div class="col-md-4">
+          <div class="package-card p-4">
+              <div class="package-header">Website in Flask</div>
+              <div class="package-price">$99.99</div>
+              <ul class="package-features">
+                  <li>Flask Extensions</li>
+                  <li>Database Integration</li>
+                  <li>Responsive Design</li>
+                  <li>API Development</li>
+              </ul>
+            
+          </div>
+      </div>
+  
+      <!-- Package 3 -->
+      <div class="col-md-4">
+          <div class="package-card p-4">
+              <div class="package-header">Custom Web Application</div>
+              <div class="package-price">$199.99</div>
+              <ul class="package-features">
+                  <li>Scalable Architecture</li>
+                  <li>Custom APIs</li>
+                  <li>Admin Dashboard</li>
+                  <li>Payment Gateway</li>
+              </ul>
+          
+          </div>
+      </div>
+  
+      <!-- Package 4 -->
+      <div class="col-md-4">
+          <div class="package-card p-4">
+              <div class="package-header">E-commerce Website</div>
+              <div class="package-price">$249.99</div>
+              <ul class="package-features">
+                  <li>Product Management</li>
+                  <li>Shopping Cart</li>
+                  <li>Payment Integration</li>
+                  <li>User Reviews</li>
+              </ul>
+            
+          </div>
+      </div>
+  
+      <!-- Package 5 -->
+      <div class="col-md-4">
+          <div class="package-card p-4">
+              <div class="package-header">Mobile App Backend</div>
+              <div class="package-price">$299.99</div>
+              <ul class="package-features">
+                  <li>API Development</li>
+                  <li>Database Management</li>
+                  <li>Authentication</li>
+                  <li>Real-time Updates</li>
+              </ul>
+              
+          </div>
+      </div>
+  
+      <!-- Package 6 -->
+      <div class="col-md-4">
+          <div class="package-card p-4">
+              <div class="package-header">Enterprise Solution</div>
+              <div class="package-price">$499.99</div>
+              <ul class="package-features">
+                  <li>Advanced Security</li>
+                  <li>Scalable Architecture</li>
+                  <li>Custom Integrations</li>
+                  <li>24/7 Support</li>
+              </ul>
+            
+          </div>
+      </div>
+  </div>
+  <style>
+    /* General styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+    }
+    .header_section {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #343a40;
+    }
+    .navbar-brand span {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #ffc107 !important;
+    }
+    .user_option img {
+        height: 25px;
+    }
+    .package-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #fff;
+    }
+    .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .package-header {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .package-price {
+        color: #28a745;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .package-btn {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .package-btn .btn {
+        background: #007bff;
+        color: #fff;
+        border-radius: 5px;
+    }
+    .package-btn .btn:hover {
+        background: #0056b3;
+    }
+    footer {
+        background: #343a40;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+    }
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
+{% endblock %}

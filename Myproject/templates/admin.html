@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Admin Panel</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+  <style>
+    /* Card Styles */
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: rgb(231, 149, 81);
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card-body {
+        padding: 2rem;
+    }
+    .btn-primary {
+        border-radius: 50px;
+        padding: 0.5rem 1.5rem;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .card-text {
+        color: #ffffff;
+    }
+
+        /* Footer Styles */
+        footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 40px 20px;
+    width: 100%; /* Ensures the footer spans the full width */
+    position: relative;
+}
+
+footer .container {
+    width: 100%; /* Ensures the container inside the footer spans the full width */
+    max-width: none; /* Removes any max-width restriction */
+    padding: 0 20px; /* Adds some padding on the sides */
+}
+
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #adb5bd;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #495057;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body class="sub_page">
+    <div class="hero_area">
+      <!-- header section strats -->
+      {% include "nav.html" %}
+      <!-- end header section -->
+    </div>
+  <div class="container mt-5">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2>Admin Panel</h2>
+        <p>Manage Feedback and Portfolio Uploads</p>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Feedback Upload Card -->
+      <div class="container mt-5">
+        <h1 class="text-center mb-4">Admin Panel</h1>
+        <div class="row">
+            <!-- Feedback Upload Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Contact View</h5>
+                        <p class="card-text">View Conatcts.</p>
+                        <a href="{% url 'contact_view2' %}" class="btn btn-primary">Go to Contact View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio Upload Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Portfolio Upload</h5>
+                        <p class="card-text">Manage and upload portfolio content.</p>
+                        <a href="{% url 'portfolio2' %}" class="btn btn-primary">Go to Portfolio Upload</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Bootstrap JS -->
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+
+ 
+
+</body>
+<footer style="margin-top: 50px;width: 100%;">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-4 mb-3">
+                <h5>About Us</h5>
+                <p class="small">
+                    We are dedicated to providing high-quality services and solutions for all your needs. 
+                    Contact us for more information.
+                </p>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Contact Section -->
+            <div class="col-md-4 mb-3">
+                <h5>Contact</h5>
+                <p class="small">
+                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Phone:</strong> +123 456 7890
+                </p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom mt-4 text-center">
+            <p class="small mb-0">© 2025 Your Company. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</html>

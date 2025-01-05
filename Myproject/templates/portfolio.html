@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>CodeX</title>
+  <style>
+  .portfolio_section .row {
+  row-gap: 30px; /* Adds vertical space between rows */
+}
+
+  .portfolio_section .card {
+    height: 100%; /* Ensures all cards are of equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .portfolio_section .card-img-top {
+    width: 100%; /* Ensures the image takes full width of the card */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Maintains aspect ratio and covers the area */
+  }
+  
+  .portfolio_section .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; /* Center aligns the text */
+  }
+  </style>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section starts -->
+    {% include "nav.html" %}
+    <!-- end header section -->
+  </div>
+
+<!-- portfolio section -->
+<section class="portfolio_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Portfolio</h2>
+      <p>Our creative projects showcasing expertise and innovation.</p>
+    </div>
+    <div class="row">
+      {% for project in projects %}
+      <!-- Dynamic Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+  <!-- end portfolio section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2025 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</body>
+
+</html>
